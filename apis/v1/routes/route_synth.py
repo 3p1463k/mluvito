@@ -14,9 +14,10 @@ templates = Jinja2Templates(directory="templates")
 @router.get("/")
 async def home(request: Request):
 
-    """Get request na zobrazeni domovske stranky"""
+    """Get request for homepage"""
 
     context = {"request": request}
+
     return templates.TemplateResponse("general_pages/home1.html", context)
 
 
@@ -24,12 +25,11 @@ async def home(request: Request):
 async def do_synt(
     request: Request,
 ):
+    """Get input, count characters and convert to mp3 with gcloud tts API"""
 
     form_data = await request.form()
     userinput = form_data["userinput"]
     number_of_characters = len(userinput)
-
-    # print(len(userinput))
 
     syntesize_userinput(userinput)
 
@@ -38,4 +38,5 @@ async def do_synt(
         "number_of_characters": number_of_characters,
         "userinput": userinput,
     }
+
     return templates.TemplateResponse("general_pages/resplay.html", context)
