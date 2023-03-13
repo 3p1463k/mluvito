@@ -31,7 +31,7 @@ async def do_synt(
 
     # print(len(userinput))
 
-    # syntesize_userinput(userinput)
+    syntesize_userinput(userinput)
 
     context = {
         "request": request,
