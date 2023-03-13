@@ -1,0 +1,39 @@
+
+
+<div class="w3-bar  w3-padding w3-hide-small w3-hide-medium">
+  <h6 class="w3-bar-item "><a href="/"class="nounderline">Home</a></h6>
+  <h6 class="w3-bar-item "><a href="/inverters/"class="nounderline">Inverters</a></h6>
+  <h6 class="w3-bar-item "><a href="/settings/"class="nounderline">Settings</a></h6>
+  <h6 class="w3-bar-item  "><a href="/data/"class="nounderline">Data</a></h6>
+  <h6 class="w3-bar-item  "><a href="/charts/"class="nounderline">Charts</a></h6>
+  <h6 class="w3-bar-item  "><a href="/help/"class="nounderline">Help</a></h6>
+
+</div>
+
+
+<div class="w3-sidebar w3-bar-block w3-card w3-animate-left" style="display:none" id="mySidebar">
+  <button class="w3-bar-item w3-button w3-large"
+  onclick="w3_close()">Close &times;</button>
+  <a class="w3-bar-item w3-button" href="/"><b>Home</b></a>
+  <a class="w3-bar-item w3-button" href="/inverters/">Inverters</a>
+  <a class="w3-bar-item w3-button" href="/settings/">Settings</a>
+  <a class="w3-bar-item w3-button" href="/data/">Data</a>
+  <a class="w3-bar-item w3-button" href="/data/">Charts</a>
+  <a class="w3-bar-item w3-button" href="/help/">Help</a>
+
+</div>
+
+
+<div class="w3-hide-large">
+  <button class="w3-button w3-xlarge" onclick="w3_open()" id="openNav">&#9776;</button>
+</div>
+
+<script>
+function w3_open() {
+  document.getElementById("mySidebar").style.width = "100%";
+  document.getElementById("mySidebar").style.display = "block";
+}
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+}
+</script>
